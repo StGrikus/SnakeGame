@@ -22,9 +22,21 @@ public class GameField extends JPanel {
 
     public GameField(){
         setBackground(Color.BLACK);
+        loadImages();
+    }
+
+    public void initGame(){
+        dots = 3;
+        for (int i = 0; i < dots; i++) {
+            x[i] = 48 - i*DOT_SIZE
+        }
     }
 
     public void loadImages(){
+        ImageIcon iia = new ImageIcon("apple.png");
+        apple = iia.getImage();
+        ImageIcon iid = new ImageIcon("dot.png");
+        dot = iid.getImage();
 
     }
 }
